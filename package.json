@@ -15,7 +15,14 @@
     "routify": "routify -D",
     "test": "jest src",
     "test:watch": "npm run test -- --watch",
-    "storybook": "start-storybook"
+    "storybook": "start-storybook",
+    "fix:check": "prettier --config ./.prettierrc --ignore-path ./.prettierignore --check **/*.{js,svelte,css,html}",
+    "fix:write": "prettier --config ./.prettierrc --ignore-path ./.prettierignore --write **/*.{js,svelte,css,html}"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
@@ -44,6 +51,9 @@
     "postcss-cli": "^7.1.1",
     "postcss-import": "^12.0.1",
     "ppid-changed": "^1.0.1",
+    "prettier": "^2.0.5",
+    "prettier-plugin-svelte": "^0.7.0",
+    "pretty-quick": "^2.0.1",
     "rollup": "^2.6.1",
     "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-livereload": "^1.2.0",
