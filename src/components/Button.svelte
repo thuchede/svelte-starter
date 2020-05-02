@@ -1,5 +1,6 @@
 <script>
   export let text;
+  export let className = undefined;
 </script>
 
-<button on:click>{text}</button>
+<button class={className} on:click>{text}</button>
